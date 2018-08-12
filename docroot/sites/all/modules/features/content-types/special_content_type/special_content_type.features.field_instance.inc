@@ -36,14 +36,15 @@ function special_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'label' => 'Special Description',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -81,7 +82,7 @@ function special_content_type_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_business',
     'label' => 'Business',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -133,8 +134,8 @@ function special_content_type_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Business');
+  t('Special Description');
   t('Special Type');
 
   return $field_instances;
