@@ -1,0 +1,6 @@
+name = "Happy Hour"
+description = "Pulls in restaurants and bars so users can manage the businesses data and associate happy hour deals with the business."
+configure = admin/structure/happy-hour-config
+version = "7.x-1.0"
+core = "7.x"
+package = "Happy Hour Custom"

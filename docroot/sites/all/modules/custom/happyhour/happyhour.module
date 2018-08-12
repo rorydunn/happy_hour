@@ -1,0 +1,70 @@
+<?php
+
+require_once __DIR__ . '/data/api-connection.php';
+
+/**
+ * Implements hook_menu().
+ */
+function happyhour_menu(){
+  $items = array();
+
+  $items['admin/structure/happy-hour-config'] = array(
+    'title' => 'Happy Hour Config',
+    'page callback' => 'happyhour_page',
+    'page arguments' => array(),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['admin/structure/pull-data'] = array(
+  'title' => 'Pull Data',
+  'description' => 'A form to mess around with.',
+  'page callback' => 'drupal_get_form',
+  'page arguments' => array('happyhour_form'),
+  'access callback' => TRUE
+);
+
+  return $items;
+}
+
+function happyhour_page() {
+  $module_path = drupal_get_path('module', 'happyhour');
+
+  return theme('happyhour');
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * @return array
+ */
+function happyhour_theme() {
+  $theme = array();
+
+  $theme['happyhour'] = array(
+    'variables' => array(),
+    'template' => 'happy-hour-config',
+    'path' => drupal_get_path('module', 'happyhour') . '/templates',
+  );
+
+  return $theme;
+}
+
+// Custom Form for pulling data
+function happyhour_form(){
+
+  $form['submit_button'] = array(
+  '#type' => 'submit',
+  '#value' => t('Pull Data'),
+  );
+
+  return $form;
+
+}
+
+function happyhour_form_validate($form, &$form_state) {
+}
+
+function happyhour_form_submit($form, &$form_state) {
+  google_places_get();
+}
