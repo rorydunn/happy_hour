@@ -1,0 +1,53 @@
+; Packaging information for happy_hour
+name = "happy_hour"
+description = "Installation profile for building a web application that shows happy hour data."
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Administration
+dependencies[] = admin_menu
+; Chaos tool suite
+dependencies[] = ctools
+; Core
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = toolbar
+dependencies[] = update
+dependencies[] = user
+; Development
+dependencies[] = devel
+; Fields
+dependencies[] = entityreference
+; Happy Hour Custom
+dependencies[] = happyhour
+; Other
+dependencies[] = entity
+; Features
+dependencies[] = features
+dependencies[] = business_content_type
+dependencies[] = field_bases
+dependencies[] = special_content_type
