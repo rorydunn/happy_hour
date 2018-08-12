@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Special Content Type feature.
+ */
+
+include_once 'special_content_type.features.inc';
