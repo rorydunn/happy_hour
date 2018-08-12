@@ -1,0 +1,3 @@
+# Ignore dev and version control system files
+.idea
+.DS_Store
