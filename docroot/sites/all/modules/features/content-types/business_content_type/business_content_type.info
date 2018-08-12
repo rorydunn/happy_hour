@@ -1,0 +1,14 @@
+name = Business Content Type
+description = Business content type for storing google places data.
+core = 7.x
+package = content types
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_place_id
+features[field_instance][] = node-business-body
+features[field_instance][] = node-business-field_place_id
+features[node][] = business
+project path = sites/all/modules/features/content-types
