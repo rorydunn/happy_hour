@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/data/api-connection.php';
+require_once __DIR__ . '/data/create-nodes.php';
 
 /**
  * Implements hook_menu().
@@ -66,5 +67,5 @@ function happyhour_form_validate($form, &$form_state) {
 }
 
 function happyhour_form_submit($form, &$form_state) {
-  google_places_get();
+  create_businesses();
 }

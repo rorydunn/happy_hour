@@ -4,3 +4,4 @@ configure = admin/structure/happy-hour-config
 version = "7.x-1.0"
 core = "7.x"
 package = "Happy Hour Custom"
+dependencies[] = entity

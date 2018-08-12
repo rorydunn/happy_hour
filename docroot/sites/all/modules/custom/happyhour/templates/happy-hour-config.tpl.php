@@ -2,4 +2,4 @@
 
 echo 'Hello';
 
-dsm(google_places_get());
+dpm(google_places_get()['results']);
