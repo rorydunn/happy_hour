@@ -12,7 +12,7 @@ function create_businesses($api_key){
       'type' => 'business',
       // 'uid' => $user->uid,
       'status' => 1,
-      'comment' => 1,
+      'comment' => 0,
       'promote' => 0,
     );
 

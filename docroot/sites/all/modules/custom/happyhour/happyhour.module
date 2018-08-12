@@ -56,7 +56,7 @@ function happyhour_form(){
 
   $form['api-key'] = array(
    '#type' => 'textfield', //you can find a list of available types in the form api
-   '#title' => 'Enter your Google Places API Key',
+   '#title' => 'Google Places API Key',
    '#size' => 60,
    '#maxlength' => 60,
    '#required' => TRUE, //make this field required
@@ -72,9 +72,10 @@ function happyhour_form(){
 }
 
 function happyhour_form_validate($form, &$form_state) {
-
+  // TODO: Validate Google Places API key before making API call
 }
 
 function happyhour_form_submit($form, &$form_state) {
+  //submit api key to create_businesses function to make api call and create drupal nodes
   create_businesses($form_state['values']['api-key']);
 }
