@@ -1,7 +1,7 @@
 <?php
 
-function create_businesses(){
-  $data = google_places_get();
+function create_businesses($api_key){
+  $data = google_places_get($api_key);
 
   foreach ($data['results'] as $result) {
 
@@ -15,6 +15,7 @@ function create_businesses(){
       'comment' => 1,
       'promote' => 0,
     );
+
     $entity = entity_create('node', $values);
     $ewrapper = entity_metadata_wrapper('node', $entity);
 
@@ -23,4 +24,5 @@ function create_businesses(){
     $ewrapper->field_place_id->set($id);
     $ewrapper->save();
   }
+  drupal_set_message(t("20 buiness nodes have been created. Please review them at /admin/content"), 'status');
 }
