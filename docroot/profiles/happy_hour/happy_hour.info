@@ -1,5 +1,5 @@
-; Packaging information for happy_hour
-name = "happy_hour"
+; Packaging information for Happy Hour App
+name = "Happy Hour App"
 description = "Installation profile for building a web application that shows happy hour data."
 core = "7.x"
 ; ----------

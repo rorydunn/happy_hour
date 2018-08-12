@@ -165,7 +165,7 @@ function happy_hour_install() {
   foreach($names as $name) {
     $term = (object) array(
       'name' => $name,
-      'vid' => $vocabulary->vid,
+      'vid' => $vocabulary_two->vid,
       'weight' => $weight,
     );
     taxonomy_term_save($term);
