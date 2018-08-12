@@ -18,4 +18,4 @@ Validate API key before making API call or build out better error reporting if c
 
 Add extra parameters to api call function so that it is not just looking for restaurants in brooklyn. 
 
-Buid front end, update business page. 
+Build front end, update business page. 
